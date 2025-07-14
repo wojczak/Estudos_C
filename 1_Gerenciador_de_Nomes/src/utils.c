@@ -98,7 +98,7 @@ void contar_lertas_a(char nomes[][50], int contador)
     {
         int cont_a = 0;
 
-        for (int j = 0; nomes[i] != '\0'; j++)
+        for (int j = 0; nomes[i][j] != '\0'; j++)
         {
             if (nomes[i][j] == 'a' || nomes[i][j] == 'A')
             {
