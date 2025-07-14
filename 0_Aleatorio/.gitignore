@@ -1,0 +1,7 @@
+output/
+*.exe
+*.o
+*.obj
+*.log
+.help/
+.0.0_Anotacoes/
