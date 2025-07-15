@@ -1,0 +1,75 @@
+
+
+1. Pasta .vscode
+
+    Guarda todos os arquivos de configuração do VS Code, como tasks.json, launch.json e c_cpp_properties.json.
+
+    não esquecer que a cada fução criada deve ser declarada dentro de task.json, em args
+
+    Não precisa mexer neles toda hora, só para ajustar configurações de build ou debug.
+
+2. Compilação rápida
+
+    Use Ctrl + Shift + B para compilar o código (executa a tarefa de build configurada em tasks.json).
+
+3. Organização dos arquivos
+    Arquivos .c (código-fonte):
+
+    Todos os arquivos .c (exceto o main.c) ficam na pasta src/. (tambem estou deixano o main.c no SRC porque estou usando o makefile)
+
+    Cada arquivo .c é responsável pela implementação das funções.
+
+    Para que suas funções sejam compiladas, não esqueça de incluir cada novo arquivo .c no campo args do tasks.json.
+
+    Arquivo main.c:
+
+    Pode ficar na raiz do projeto ou também em src/ se preferir.
+
+    Arquivos .h (headers):
+
+    Devem ficar na pasta include/.
+
+    Sempre começar o arquivo com:
+
+    #ifndef NOMEDOARQUIVO_H
+    #define NOMEDOARQUIVO_H
+    Isso evita duplicidade de declarações caso o arquivo seja incluído mais de uma vez.
+
+    Finalize sempre com #endif.
+
+    Os headers servem para declarar protótipos das funções, structs, constantes etc.
+
+    Pasta output/:
+
+    Guarda o executável gerado a cada compilação (por exemplo, debug.exe ou main.exe).
+
+    Mantém seu projeto organizado e separado do código-fonte.
+
+    Resumo visual da estrutura recomendada:
+    makefile
+    Copiar
+    Editar
+    projeto/
+    ├── .vscode/      # Configurações do VS Code
+    │     └── tasks.json, launch.json, etc.
+    ├── src/          # Códigos-fonte (.c) exceto o main
+    │     └── calc.c, vetores.c, ...
+    ├── include/      # Headers (.h)
+    │     └── calc.h, vetores.h, ...
+    ├── output/       # Executáveis compilados
+    │     └── debug.exe
+    ├── main.c        # Função principal do programa
+
+4. Makefile
+    Implementado o makefile no vscode para que nao seja necessario toda vez inserir os arquivos .c manualmente em task, em args, 
+    basta digitar make no terminal para compilar tudo de uma vez
+    basta digitar make clean para limpar
+
+5. Github
+    sempre que quiser atualizar a verssão no github, abre o prompt na pasta raiz do projeto e executa os codigos:
+    git add .
+    git commit -m "Mensagem explicando a mudança"
+    git push
+
+
+6. 
