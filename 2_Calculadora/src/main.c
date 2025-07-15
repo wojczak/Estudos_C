@@ -16,13 +16,14 @@ int main()
 
     do
     {
-        puts("Digite a operacao desejada: ");
+        puts("Digite a operacao desejada: \n");
         puts("1 - Soma\n"
              "2 - Subtracao\n"
              "3 - Multiplicacao\n"
              "4 - Divisao\n"
              "5 - Sair\n");
         scanf("%d", &opcao);
+        system("cls || clear");
 
         switch (opcao)
         {
@@ -46,47 +47,67 @@ int main()
             continue;
         }
 
-    } while (1);
+    } while (opcao != 5);
 
     return 0;
 }
 
 void soma(int a, int b)
 {
+    puts("Voce escolheu a operacao de soma.\n");
     printf("Digite o primeiro numero: ");
     scanf("%d", &a);
     printf("Digite o segundo numero: ");
     scanf("%d", &b);
-    printf("A soma de %d + %d e %d\n", a, b, a + b);
+    printf("\n\n A soma de %d + %d e %d\n", a, b, a + b);
+    puts("\n\nPressione Enter para continuar...");
+    getchar();
+    getchar();
+    system("cls || clear");
 }
 
 void subtrai(int a, int b)
 {
+    puts("Voce escolheu a operacao de subtracao.\n");
     printf("Digite o primeiro numero: ");
     scanf("%d", &a);
     printf("Digite o segundo numero: ");
     scanf("%d", &b);
-    printf("A subtracao de %d - %d e %d\n", a, b, a - b);
+    printf("\n\nA subtracao de %d - %d e %d\n", a, b, a - b);
+    puts("\n\nPressione Enter para continuar...");
+    getchar();
+    getchar();
+    system("cls || clear");
 }
 
 void multipica(int a, int b)
 {
+    puts("Voce escolheu a operacao de multiplicacao.\n");
     printf("Digite o primeiro numero: ");
     scanf("%d", &a);
     printf("Digite o segundo numero: ");
     scanf("%d", &b);
-    printf("A multiplicacao de %d * %d e %d\n", a, b, a * b);
+    printf("\n\nA multiplicacao de %d X %d e %d\n", a, b, a * b);
+    puts("\n\nPressione Enter para continuar...");
+    getchar();
+    getchar();
+    system("cls || clear");
 }
 void divide(int a, int b)
 {
+    puts("Voce escolheu a operacao de divisao.\n");
     printf("Digite o primeiro numero: ");
     scanf("%d", &a);
-    printf("Digite o segundo numero: ");
+    printf("\Digite o segundo numero: ");
     scanf("%d", &b);
     if (b == 0)
     {
-        puts("Divisao por zero nao e permitida.");
+        puts("\n\nDivisao por zero nao e permitida.\n\n");
         return;
     }
-    printf("A divisao de %d / %d e %d\n", a, b, a / b);
+    printf("\n\nA divisao de %d / %d e %d\n", a, b, a / b);
+    puts("\n\nPressione Enter para continuar...");
+    getchar();
+    getchar();
+    system("cls || clear");
 }
